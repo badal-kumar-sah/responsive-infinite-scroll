@@ -39,9 +39,9 @@ function displayPhotos() {
       alt: photo.alt_description,
       title: photo.alt_description,
     });
-
+    // Load new images as we scroll
+    img.addEventListener("load", imageloaded);
     // Appending the tags within each-other
-    imageloaded();
     anchorTag.appendChild(img);
     imageContainer.appendChild(anchorTag);
   });
